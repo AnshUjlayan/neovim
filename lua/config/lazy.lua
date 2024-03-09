@@ -12,12 +12,36 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
       colorscheme = "gruvbox-material",
     } },
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    -- import/override with your plugins
-    { import = "plugins" },
+		-- import any extras modules here
+
+    -- language support
+    { import = "lazyvim.plugins.extras.lang.c" },
+    { import = "lazyvim.plugins.extras.lang.cpp" },
+		{ import = "lazyvim.plugins.extras.lang.rust" },
+    { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.javascript" },
+		{ import = "lazyvim.plugins.extras.lang.typescript" },
+		{ import = "lazyvim.plugins.extras.lang.json" },
+		{ import = "lazyvim.plugins.extras.lang.tailwind" },
+		{ import = "lazyvim.plugins.extras.lang.css" },
+
+    -- linting
+    { import = "lazyvim.plugins.extras.linting.clang-tidy" },
+    { import = "lazyvim.plugins.extras.linting.rust-analyzer" },
+    { import = "lazyvim.plugins.extras.linting.flake8" },
+		{ import = "lazyvim.plugins.extras.linting.eslint" },
+
+    -- formatting
+    { import = "lazyvim.plugins.extras.formatting.clang-format" },
+    { import = "lazyvim.plugins.extras.formatting.black" },
+    { import = "lazyvim.plugins.extras.formatting.rustfmt" },
+		{ import = "lazyvim.plugins.extras.formatting.prettier" },
+
+    -- completion
+		{ import = "lazyvim.plugins.extras.coding.copilot" },
+		{ import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+
+		{ import = "plugins" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
